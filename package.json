@@ -1,0 +1,42 @@
+{
+  "name": "grunt-svg-factory-writer",
+  "description": "A file writer task for svg-factory",
+  "version": "0.1.0",
+  "homepage": "",
+  "author": {
+    "name": "morgan craft",
+    "email": "mgan59@gmail.com",
+    "url": "http://morgancraft.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mgan59/svg-factory-writer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mgan59/svg-factory-writer/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt": "~0.4.2"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.2"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
