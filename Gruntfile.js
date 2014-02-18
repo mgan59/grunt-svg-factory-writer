@@ -11,6 +11,9 @@
 module.exports = function(grunt) {
 
   // Project configuration.
+  // TODO
+  // * add task to cp the (accepted) test generated in tmp/ to the test/expected 
+  // * add jshint checked on the test/expected or on tmp/
   grunt.initConfig({
     jshint: {
       all: [
@@ -30,12 +33,14 @@ module.exports = function(grunt) {
 
     // Configuration to be run (and then tested).
     svg_factory_writer: {
+      // test a default setting
       default_options: {
         options: {
+
         },
         files: [
           {
-            expand:true, cwd:'test/fixtures/', src:'*.svg', dest:'tmp'
+            expand:true, cwd:'test/fixtures/', src:'*.svg', dest:'tmp', 
           }
         ]
       }

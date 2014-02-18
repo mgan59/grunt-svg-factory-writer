@@ -28,11 +28,23 @@ exports.svg_factory_writer = {
     done();
   },
   default_options: function(test) {
-    //test.expect(1);
+    test.expect(2);
+    
+    //
+    // Test simple
+    //
+    var actual = grunt.file.read('tmp/simple.js');
+    var expected = grunt.file.read('test/expected/simple.js');
+    test.equal(actual, expected, 'should describe what the default behavior is.');
 
-    //var actual = grunt.file.read('tmp/default_options.txt');
-    //var expected = grunt.file.read('test/expected/default_options');
-    //test.equal(actual, expected, 'should describe what the default behavior is.');
+    //
+    // Test hypen conversion using bob-the-blob.svg 
+    // The factory name should be window.bob_the_blob
+    //
+    var bobActual = grunt.file.read('tmp/bob-the-blob.js');
+    var bobExpected = grunt.file.read('test/expected/bob-the-blob.js');
+    test.equal(bobActual, bobExpected, 'should describe what the default behavior is.');
+
 
     test.done();
   }
